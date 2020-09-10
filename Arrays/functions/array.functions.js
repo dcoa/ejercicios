@@ -11,49 +11,55 @@ const add = (array, element) => array.push(element);
  * @param array
  * @param element
  */
-const remove = (array, element) => {};
+const remove = (array, element) => {
+  let removeE = array.indexOf(element);
+  array.splice(removeE, 1);
+  return array
+};
+
 
 /**
  * Remove by specific position
  * @param position
  */
-const removeByPosition = (position) => {};
+const removeByPosition = (position, array,numElement) => {
+  let removeElement = array.splice(position, numElement);
+  return array
+};
 
 /**
  * Sort by function
  * @param fn
  */
-const sort = (fn) => {}
+const sort = (fn) => { (array, fn) => {     return array.sort(fn); } ;
 
 /**
  * Join with a second array
  * @param newArray
  */
-const joinWith = (newArray) => {}
+const joinWith = (actualArray, newArray) => actualArray.concat(newArray);
 
-const searchBy = (value) => {}
+const searchBy = (array, value) => array.find(e => e === value);
 
 /**
  * Return the array values
  */
-const values = () => {};
+const values = (array) => {return array.forEach(item => item )};
 
 /**
  * Get the array
  * position numbers
  */
-const size = () => {}
+const size = (array) => array.length;
 
 /**
  * Clear array
  */
-const clear = () => {}
+const clear = (array) => array = [ ];
 
 /**
- * Convert array to String
+ * Convert array toString  join
  */
-const toString = () => {}
+const toString = (array) => array.join(' ');
 
-
-
-export {add, remove, removeByPosition, values}
+export { add, remove, removeByPosition, values }
