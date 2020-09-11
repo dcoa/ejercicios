@@ -39,6 +39,7 @@ const sort = (fn) => { (array, fn) => {     return array.sort(fn); } ;
  */
 const joinWith = (actualArray, newArray) => actualArray.concat(newArray);
 
+//const searchBy = (array, value) => array.filter(e => e === value);
 const searchBy = (array, value) => array.find(e => e === value);
 
 /**
@@ -58,8 +59,8 @@ const size = (array) => array.length;
 const clear = (array) => array = [ ];
 
 /**
- * Convert array toString  join
+ * Convert array toString  o join
  */
 const toString = (array) => array.join(' ');
 
-export { add, remove, removeByPosition, values }
+export { add }

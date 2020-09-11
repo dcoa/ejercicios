@@ -234,3 +234,16 @@ const students = [
         "picture": "men/11.jpg"
     }
 ]
+
+
+const noDuplicateList = []
+
+students.forEach(item => {
+  if(!noDuplicateList.some(e => e.email === item.email)){
+    console.log(item.username);
+    noDuplicateList.push(item);
+  }
+});
+
+console.log(students.length, 'now =>', noDuplicateList.length);
+//console.log(noDuplicateList);
